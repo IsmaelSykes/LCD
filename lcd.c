@@ -21,3 +21,21 @@ lcd_status_t clear(lcd_port_t *pines)
 	printf("\r\n  --- LCD Clear Display ----\r\n");
 	return LCD_CLEAR_OK;
 }
+
+lcd_status_t message(lcd_port_t *pines,char *message, size_t length)
+{
+	for(int i =0; i< length-1; i++)
+		write_data(pines,*(message++));
+
+	return LCD_MESSAGE_OK;
+}
+
+lcd_status_t print_float(char *string,size_t len, char *fmt, ...)
+{
+   va_list arg_ptr;
+   va_start(arg_ptr, fmt);
+   vsnprintf(string, len, fmt, arg_ptr);
+   va_end(arg_ptr);
+
+   return LCD_INT2STR_OK;
+}

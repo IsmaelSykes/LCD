@@ -39,3 +39,17 @@ lcd_status_t get_number(char *string,size_t len, char *fmt, ...)
 
    return LCD_INT2STR_OK;
 }
+
+lcd_status_t place(lcd_port_t *pines,size_t raw, size_t column)
+{ 
+	if(raw == 1)
+	{
+		write_command(pines,(0x80 | column));
+	}
+	if(raw == 2)
+	{
+		write_command(pines,(0xC0 | column));
+	}
+
+	return LCD_PLACEMENT_OK;
+}

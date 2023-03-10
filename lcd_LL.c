@@ -1,6 +1,6 @@
 #include "lcd_LL.h"
 
-//------- LCD_LL at Master ---- 
+//------- LCD_LL at Develop ---- 
 
 lcd_LL_status_t log_command(lcd_port_t *pines,uint8_t cmd)
 {

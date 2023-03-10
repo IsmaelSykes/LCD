@@ -30,7 +30,7 @@ lcd_status_t message(lcd_port_t *pines,char *message, size_t length)
 	return LCD_MESSAGE_OK;
 }
 
-lcd_status_t print_float(char *string,size_t len, char *fmt, ...)
+lcd_status_t get_number(char *string,size_t len, char *fmt, ...)
 {
    va_list arg_ptr;
    va_start(arg_ptr, fmt);
@@ -38,4 +38,18 @@ lcd_status_t print_float(char *string,size_t len, char *fmt, ...)
    va_end(arg_ptr);
 
    return LCD_INT2STR_OK;
+}
+
+lcd_status_t place(lcd_port_t *pines,size_t raw, size_t column)
+{ 
+	if(raw == 1)
+	{
+		write_command(pines,(0x80 | column));
+	}
+	if(raw == 2)
+	{
+		write_command(pines,(0xC0 | column));
+	}
+
+	return LCD_PLACEMENT_OK;
 }

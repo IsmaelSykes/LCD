@@ -35,5 +35,5 @@ lcd_status_t lcd_init(lcd_port_t *pines);
 lcd_status_t clear(lcd_port_t *pines);
 lcd_status_t message(lcd_port_t *pines,size_t raw, size_t column);
 lcd_status_t get_number(char *string,size_t len, char *fmt, ...);
-
+lcd_status_t place(lcd_port_t *pines,size_t raw, size_t column);
 #endif /* INC_LCD_H_ */

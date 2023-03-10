@@ -1,5 +1,5 @@
 #include "lcd.h"
-//------------ LCD at develop -------
+//------------ LCD at master  -------
 
 /*This Function initilicer the LCD display*/
 lcd_status_t lcd_init(lcd_port_t *pines)

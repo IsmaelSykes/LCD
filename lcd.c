@@ -26,11 +26,13 @@ lcd_status_t clear(lcd_port_t *pines)
 	return LCD_CLEAR_OK;
 }
 
+
 /*This Function pints an message into LCD display*/
-lcd_status_t message(lcd_port_t *pines,char *message, size_t length)
+lcd_status_t message(lcd_port_t *pines,char *buff, size_t length)
+
 {
 	for(int i =0; i< length-1; i++)
-		write_data(pines,*(message++));
+		write_data(pines,*(buff++));
 
 	return LCD_MESSAGE_OK;
 }

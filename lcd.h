@@ -1,6 +1,6 @@
 #ifndef INC_LCD_H_
 #define INC_LCD_H_
-//------ LCD at Master -----------------
+//------ LCD at Develop -----------------
 #include "lcd_LL.h"
 #include <stdarg.h>
 

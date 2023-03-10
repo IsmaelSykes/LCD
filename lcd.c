@@ -1,6 +1,6 @@
 #include "lcd.h"
 
-//------------ LCD at master  -------
+//------------ LCD at Master  -------
 
 
 /*This Function initilicer the LCD display*/

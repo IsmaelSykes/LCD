@@ -1,5 +1,5 @@
 #include "lcd.h"
-
+//------------ LCD at develop -------
 lcd_status_t lcd_init(lcd_port_t *pines)
 {
 	write_command(pines,LCD_FUNTION_SET);
@@ -30,7 +30,7 @@ lcd_status_t message(lcd_port_t *pines,char *message, size_t length)
 	return LCD_MESSAGE_OK;
 }
 
-lcd_status_t print_float(char *string,size_t len, char *fmt, ...)
+lcd_status_t get_number(char *string,size_t len, char *fmt, ...)
 {
    va_list arg_ptr;
    va_start(arg_ptr, fmt);

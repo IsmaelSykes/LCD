@@ -1,5 +1,5 @@
 #include "lcd_LL.h"
-
+//------- LCD_LL at develop ---- 
 lcd_LL_status_t log_command(lcd_port_t *pines,uint8_t cmd)
 {
 	/*printf("\r\n --- Index of Pines----\r\n");

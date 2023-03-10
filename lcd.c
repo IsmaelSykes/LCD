@@ -1,5 +1,7 @@
 #include "lcd.h"
 //------------ LCD at develop -------
+
+/*This Function initilicer the LCD display*/
 lcd_status_t lcd_init(lcd_port_t *pines)
 {
 	write_command(pines,LCD_FUNTION_SET);
@@ -13,6 +15,8 @@ lcd_status_t lcd_init(lcd_port_t *pines)
 	return LCD_INIT_OK;
 }
 
+
+/*This Function clear the display and puts the cursor in position 0,0*/
 lcd_status_t clear(lcd_port_t *pines)
 {
 	write_command(pines,LCD_DISPLAY_CURSOR_HOME);
@@ -22,6 +26,7 @@ lcd_status_t clear(lcd_port_t *pines)
 	return LCD_CLEAR_OK;
 }
 
+/*This Function pints an message into LCD display*/
 lcd_status_t message(lcd_port_t *pines,char *message, size_t length)
 {
 	for(int i =0; i< length-1; i++)
@@ -30,6 +35,7 @@ lcd_status_t message(lcd_port_t *pines,char *message, size_t length)
 	return LCD_MESSAGE_OK;
 }
 
+/*This Function get a digits form float numbers*/
 lcd_status_t get_number(char *string,size_t len, char *fmt, ...)
 {
    va_list arg_ptr;
@@ -40,6 +46,7 @@ lcd_status_t get_number(char *string,size_t len, char *fmt, ...)
    return LCD_INT2STR_OK;
 }
 
+/*This function move the cursor, puts it x and y coordinates*/
 lcd_status_t place(lcd_port_t *pines,size_t raw, size_t column)
 { 
 	if(raw == 1)

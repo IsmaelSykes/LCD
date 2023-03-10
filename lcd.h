@@ -7,7 +7,7 @@
 // Function set: 8 bit, 2 line mode, and 5x7 formant
 #define LCD_FUNTION_SET           (0x38)
 // Display and Cursor: display on, underline on, and blink on 
-#define LCD_DISPLAY_CURSOR_SET    (0x0F)
+#define LCD_DISPLAY_CURSOR_SET    (0x0C)
 // Character enty mode: increment, display shift on 
 #define LCD_CHARACTER_ENTRY_MODE  (0x06)
 // Display and Cursor home
